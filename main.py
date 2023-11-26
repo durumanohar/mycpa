@@ -6,6 +6,9 @@ from langchain.vectorstores import Chroma
 from langchain import OpenAI, VectorDBQA
 from langchain.chains import RetrievalQAWithSourcesChain
 import PyPDF2
+import os 
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+
 
 #This function will go through pdf and extract and return list of page texts.
 def read_and_textify(files):
